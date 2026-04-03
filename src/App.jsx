@@ -3,7 +3,7 @@ import "./Components/News.css";
 
 export default function App() {
   return (
-    <div>
+    <div className="container">
       <News />
     </div>
   )
