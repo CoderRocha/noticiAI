@@ -1,16 +1,97 @@
-# React + Vite
+## NoticiAI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+O NoticiAI é um portal de notícias, onde o usuário navega por categorias e visualiza as manchetes e artigos mais recentes de um determinado país e idioma.
 
-Currently, two official plugins are available:
+## Índice
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- [Sobre o Projeto](#sobre-o-projeto)
+- [Funcionalidades](#funcionalidades)
+- [Stack](#stack)
+- [Estrutura do Projeto](#estrutura-do-projeto)
+- [Instalação](#instalação)
+- [Executando o Projeto](#executando-o-projeto)
+- [Configurações](#configurações)
+- [Autor](#autor)
 
-## React Compiler
+## Sobre o Projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O **NoticiAI** é um portal de notícias em tempo real. O usuário seleciona uma categoria no menu lateral e visualiza a manchete principal e até 6 artigos relacionados, todos consumidos via API GNews. Ao clicar em qualquer artigo, um modal é exibido com os detalhes completos, como: título, fonte, data, conteúdo e link para a matéria original.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Feed de notícias**
+  - Exibição de uma manchete principal em destaque.
+  - Grade com até 6 artigos secundários por categoria.
+
+- **Categorias**
+  - Navegação por 9 categorias: `general`, `world`, `business`, `technology`, `entertainment`, `sports`, `science`, `health` e `nation`.
+  - Atualização automática do feed ao selecionar uma nova categoria.
+
+- **Modal de artigo**
+  - Exibição de imagem, título, fonte, data formatada e conteúdo do artigo.
+  - Link direto para a matéria completa no veículo de origem.
+
+## Stack
+
+- **Frontend**
+  - **React**
+  - **Vite**
+  - **Axios**
+
+## Estrutura do Projeto
+
+- **`src/`**
+  - **`App.jsx`**
+  - **`main.jsx`**
+  - **`index.css`**
+  - **`Components/News.jsx`**
+  - **`Components/News.css`**
+  - **`Components/NewsModal.jsx`**
+  - **`Components/NewsModal.css`**
+  - **`assets/images/`**
+
+## Instalação
+
+Pré-requisitos:
+
+- **Node.js**
+- API Key **GNews** ([gnews.io](https://gnews.io))
+
+1. **Instalar as dependências**
+
+   ```bash
+   npm install
+   ```
+
+2. **Criar o arquivo `.env` a partir do exemplo**
+
+   ```bash
+   cp .env.example .env
+   ```
+
+3. **Configurar a variável de ambiente no `.env`**
+
+   - `VITE_NEWS_API_KEY`
+
+## Executando o Projeto
+
+```bash
+npm run dev
+```
+
+Após rodar o comando, acesse a aplicação em `http://localhost:5173`.
+
+## Configurações
+
+As variáveis de ambiente estão em `.env.example`:
+
+O idioma e o país das notícias podem ser alterados diretamente nos parâmetros `lang` e `country` da requisição, localizados no componente `News.jsx` (ex.: `lang=en&country=us` para inglês/EUA ou `lang=pt&country=br` para português/Brasil).
+
+## Autor
+
+**Guilherme Rocha (CoderRocha)**
+
+- GitHub: [CoderRocha](https://github.com/coderrocha)
+- LinkedIn: [Guilherme Rocha](https://www.linkedin.com/in/guilherme-rocha-da-silva)
+
+---
