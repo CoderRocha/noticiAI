@@ -1,11 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import techImg from '../assets/images/tech.jpg'
-import wordlImg from '../assets/images/world.jpg'
-import sportsImg from '../assets/images/sports.jpg'
-import scienceImg from '../assets/images/science.jpg'
-import healthImg from '../assets/images/health.jpg'
-import entertainmentImg from '../assets/images/entertainment.jpg'
-import nationImg from '../assets/images/nation.jpg'
 import noImg from '../assets/images/no-img.png'
 import './News.css'
 import axios from 'axios'
@@ -47,7 +40,7 @@ const News = () => {
       setHeadline(fetchedNews[0])
       setNews(fetchedNews.slice(1, 7))
 
-      console.log(news)
+      // console.log(fetchedNews)
     }
 
     fetchNews()
@@ -62,7 +55,7 @@ const News = () => {
     setSelectedArticle(article)
     setShowModal(true)
 
-    console.log(article)
+    // console.log(article)
   }
 
   return (
