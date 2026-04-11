@@ -26,7 +26,7 @@ const News = () => {
   useEffect(() => {
     const fetchNews = async () => {
       // mude os params de 'lang' e 'country' para 'en' e 'us', ou 'pt' e 'br'
-      const url = `https://gnews.io/api/v4/top-headlines?category=${selectedCategory}&lang=pt&country=br&apikey=${import.meta.env.VITE_NEWS_API_KEY}`
+      const url = `/api/news?category=${selectedCategory}&lang=pt&country=br`
       const response = await axios.get(url)
 
       const fetchedNews = response.data.articles
