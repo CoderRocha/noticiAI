@@ -38,6 +38,9 @@ O **NoticiAI** é um portal de notícias em tempo real. O usuário seleciona uma
   - **Vite**
   - **Axios**
 
+- **Backend**
+  - **Netlify Functions**
+
 ## Estrutura do Projeto
 
 - **`src/`**
@@ -49,12 +52,15 @@ O **NoticiAI** é um portal de notícias em tempo real. O usuário seleciona uma
   - **`Components/NewsModal.jsx`**
   - **`Components/NewsModal.css`**
   - **`assets/images/`**
+  - **`netlify/functions/news.js`**
+  - **`netlify.toml`**
 
 ## Instalação
 
 Pré-requisitos:
 
 - **Node.js**
+- **Netlify CLI**
 - API Key **GNews** ([gnews.io](https://gnews.io))
 
 1. **Instalar as dependências**
@@ -76,10 +82,10 @@ Pré-requisitos:
 ## Executando o Projeto
 
 ```bash
-npm run dev
+netlify dev
 ```
 
-Após rodar o comando, acesse a aplicação em `http://localhost:5173`.
+Após rodar o comando, acesse a aplicação em `http://localhost:8888`.
 
 ## Configurações
 
